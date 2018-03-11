@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const serve = require('koa-static');
 const koaBody = require('koa-body');
+const compress = require('koa-compress');
 const config = require('config');
 
 const PORT = process.env.PORT || config.get('default.port');
@@ -24,6 +25,13 @@ app.use(logger);
 app.use(errorHandler);
 app.use(serve('public/'));
 app.use(koaBody());
+app.use(compress({
+  filter: function (content_type) {
+  	return /text/i.test(content_type)
+  },
+  threshold: 2048,
+  flush: require('zlib').Z_SYNC_FLUSH
+}));
 app.use(routes);
 app.use(allowedMethods);
 
