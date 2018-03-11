@@ -3,6 +3,9 @@
   "main": "index.js",
   "description": "A sample Node.js app using Koa",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.1.4"
+  },
   "keywords": [
     "node",
     "heroku",
