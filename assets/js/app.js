@@ -21,7 +21,7 @@ const UserPages = [
   { name: 'GalGadot', previewImage: "photo_2018-03-11_11-09-23.jpg" },
   { name: 'ayu_19980408', previewImage: "photo_2018-03-11_11-09-24.jpg" },
   { name: '20thCenturyFox', previewImage: "20th.jpg" },
-  { name: 'OfficialRandL', previewImage: "photo_2018-03-11_10-37-32.jpg" },
+  { name: 'OfficialRandL', previewImage: "reading.jpg" },
   { name: 'dumbtobeat', previewImage: "photo3.jpg" }
 ];
 
