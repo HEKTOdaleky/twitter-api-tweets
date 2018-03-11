@@ -21,6 +21,7 @@ app.use(async function (ctx, next) {
   ctx.set('X-Response-Time', `${ms}ms`);
 });
 
+// compressing content
 app.use(compress({
   filter: function (content_type) {
   	return /text/i.test(content_type)
