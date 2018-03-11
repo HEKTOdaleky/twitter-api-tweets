@@ -6,7 +6,6 @@ const twitter = require('../libs/twitter');
 const router = new Router();
 
 router.get('/', async (ctx, next) => {
-  ctx.compress = true;
   ctx.type = 'html';
   ctx.body = fs.createReadStream(config.get('frontpage.fullPath'));
   await next();

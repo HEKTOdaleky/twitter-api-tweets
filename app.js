@@ -21,10 +21,6 @@ app.use(async function (ctx, next) {
   ctx.set('X-Response-Time', `${ms}ms`);
 });
 
-app.use(logger);
-app.use(errorHandler);
-app.use(serve('public/'));
-app.use(koaBody());
 app.use(compress({
   filter: function (content_type) {
   	return /text/i.test(content_type)
@@ -32,6 +28,11 @@ app.use(compress({
   threshold: 2048,
   flush: require('zlib').Z_SYNC_FLUSH
 }));
+
+app.use(logger);
+app.use(errorHandler);
+app.use(serve('public/'));
+app.use(koaBody());
 app.use(routes);
 app.use(allowedMethods);
 
