@@ -1,0 +1,34 @@
+$inputFontSize: 18px
+$inputPaddingTop: .5rem
+$inputPaddingLeft: 1.5rem
+
+form
+  width: 100%
+  height: auto
+  div
+    display: inline-block
+    width: 100%
+    input
+      width: 100%
+      padding: $inputPaddingTop $inputPaddingLeft
+      box-sizing: border-box
+      transition: all .3s linear
+  input[type=text]
+    font-size: $inputFontSize
+    outline: none
+    border-style: solid
+    border-width: 0 0 2px 0
+    border-color: darken($backgroundColor, 10%)
+    background-color: $inputBackground
+    color: $inputColor
+    &:focus
+      color: $inputColorFocused
+      padding: $inputPaddingTop * 1.5 $inputPaddingLeft
+      font-size: $inputFontSize + 2px
+  input[type=submit]
+
+@media screen and(max-width: 767px)
+  form
+    input[type=text]
+      font-size: $inputFontSize + 2px!important
+      padding: $inputPaddingTop * 1.5 $inputPaddingLeft!important

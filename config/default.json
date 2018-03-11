@@ -1,0 +1,33 @@
+{
+  "default": {
+    "port": 3000,
+    "cache_assets": true,
+    "secret_key": "7EHDWHD9W9UW9FBFB949394BWYFG8WE78F"
+  },
+  "development": {
+    "cache_assets": false
+  },
+  "test": {
+    "port": 3001
+  },
+  "production": {
+    "secret_key": "3F8RRJR30UHERGUH8UERHGIUERHG3987GH8"
+  },
+  "twitter_api": {
+    "consumer_key": "FEdHHzsDPmuukwVgKJ405NxbR",
+    "consumer_secret": "8W1C6ziZNNLZDT699FWcc1TkymBwCeb38QErCbm2AHkYIiPtXq",
+    "access_token_key": "722766288662044672-rtfAR5g4ttACzOLxIngQFUkPZBG7eQe",
+    "access_token_secret": "d9lHA5lBsGCFkN1oN2tP9Egiy5dI20OBgCJ5m7YPcwooC"
+  },
+  "logger": {
+    "filename": "access.log",
+    "props": {
+      "flags": "a"
+    }
+  },
+  "frontpage": {
+    "name": "index.html",
+    "path": "public/",
+    "fullPath": "public/index.html"
+  }
+}

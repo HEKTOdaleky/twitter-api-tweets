@@ -1,0 +1,74 @@
+@import './variables'
+
+@import './reset'
+
+@import './modules/button'
+
+@import './partials/form'
+
+@import './partials/tweet'
+
+@import './mixins/load.sass'
+
+@import './components/user'
+@import './components/page'
+
+.tweet
+  @import './components/gif'
+  @import './components/video'
+  @import './components/photo'
+  @import './components/tweet'
+
+body
+  background-color: $backgroundColor
+
+@import url('https://fonts.googleapis.com/css?family=Antic+Slab|Nanum+Pen+Script')
+
+@keyframes arrow-up
+  0%
+    transform: translateY(1rem)
+  100%
+    transform: translateY(-1rem)
+
+main
+  padding: 1rem
+  box-sizing: border-box
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  width: 100%
+  header.app-guide
+    margin-bottom: 1rem
+    border-bottom: 1px solid $strongTextColor
+    center
+      color: $textColor
+      padding-bottom: 1rem
+      &>*
+        margin: 1rem
+      p
+        font-size: 65px
+        i
+          transform: translateY(0)
+          animation-name: arrow-up
+          animation-duration: 1s
+          animation-iteration-count: infinite
+          animation-timing-function: ease-in-out
+          animation-direction: alternate-reverse
+      h3
+        font-family: 'Antic Slab', serif
+        font-size: 75px
+        cursor: default
+
+.clear-all
+  position: fixed
+  right: 0
+  top: 0
+  padding: .7rem 1rem
+  z-index: 999
+
+@media screen and(max-width: 767px)
+  .clear-all
+    padding: 1rem!important
+
+.hidden
+  display: none

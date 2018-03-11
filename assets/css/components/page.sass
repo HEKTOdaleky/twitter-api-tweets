@@ -1,0 +1,47 @@
+.default-pages
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+  &_container
+    position: relative
+    background-repeat: no-repeat
+    background-size: 100% auto
+    background-position: top center
+    width: 300px
+    // border-radius: 10px 10px 0 0
+    overflow: hidden
+    margin: 1rem
+    transition: background-position 2s linear
+    &::before
+      vertical-align: middle
+      text-align: center
+      opacity: .65
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      transition: all .3s ease-in-out
+      background-color: $backgroundColorInverted
+    &:hover
+      cursor: pointer
+      background-position: bottom center
+      &::before
+        opacity: 0
+      .description
+        transform: translateY(0)
+    .description
+      padding: 2rem 0
+      margin-top: 400px
+      color: white
+      background-color: blackt
+      text-align: center
+      background-color: #212121
+      transform: translateY(100%)
+      transition: transform .5s ease-in-out
+      span
