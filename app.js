@@ -3,7 +3,7 @@ const serve = require('koa-static');
 const koaBody = require('koa-body');
 const config = require('config');
 
-const PORT = process.env.port || config.get('default.port');
+const PORT = process.env.PORT || config.get('default.port');
 
 const logger = require('./middleware/logger');
 const errorHandler = require('./middleware/error');
@@ -27,6 +27,6 @@ app.use(koaBody());
 app.use(routes);
 app.use(allowedMethods);
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server work on port ${PORT}...`);
 });
