@@ -71,6 +71,7 @@ module.exports = class Tweets {
     }
   }
 
+  // change tweet content type
   parse(tweet = this.tweet) {
     let cleanTweet = {
       user: this.getUserInfo(tweet),
